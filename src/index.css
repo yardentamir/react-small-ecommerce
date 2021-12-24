@@ -275,9 +275,6 @@ body {
 .cart__number {
   display: flex;
   justify-content: center;
-  /* align-items: center;
-  height: 150px;
-  padding: 50px 30px 10px; */
 }
 .cart__number--cartIcon {
   color: #fff;
@@ -397,13 +394,6 @@ body {
 /* 
 payment card */
 
-.product-count {
-  position: absolute;
-  top: 25%;
-  left: 45%;
-  height: 30px;
-}
-
 .product-count a {
   text-decoration: none;
   font-weight: 700;
@@ -437,4 +427,28 @@ payment card */
 
 :disabled {
   background-color: silver;
+}
+
+.item {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  .card {
+    height: auto;
+    width: auto;
+  }
+  .card img,
+  .card__shop__action {
+    width: auto;
+  }
+
+  .item {
+    display: block;
+  }
+
+  .content {
+    text-align: center;
+  }
 }

@@ -30,8 +30,6 @@ export default class App extends React.Component {
               )
             })
           }
-
-          {/* {data.map((product) => <span key={"span " + product.id}><Link key={product.id} to={`${product.id}`} className="item">{product.title}</Link>  * </span>)} */}
         </div>
       </div>
     )

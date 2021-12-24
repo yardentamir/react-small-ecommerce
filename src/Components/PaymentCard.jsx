@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from "uuid"; // makes random IDs
 
 
 export default class PaymentCard extends React.Component {
@@ -6,26 +7,30 @@ export default class PaymentCard extends React.Component {
 
   render() {
     return (
-      <div class="item">
-        <div class="ui small image">
-          <img src="/images/wireframe/image.png" alt="" />
-        </div>
-        <div class="content">
-          <div class="header">Arrowhead Valley Camp</div>
-          <div class="meta">
-            <span class="price">$1200</span>
-            <span class="stay">1 Month</span>
-            <div class="product-count">
-              <button class="button-count no-active" disabled>-</button>
-              <input type="text" readonly class="number-product" value="1" />
-              <button class="button-count">+</button>
+      <>
+        {this.props.cartData.map((product) => {
+          return (<span key={uuidv4()} >
+            <div className="item">
+              <div className="ui small image">
+                <img src={product.img} alt="" />
+              </div>
+              <div className="content">
+                <div className="header">{product.title}</div>
+                <div className="meta">
+                  <span className="price">{product.price}</span>
+                  <div className="product-count">
+                    <button className="button-count no-active" disabled>-</button>
+                    <input type="text" readonly className="number-product" value={product.count} />
+                    <button className="button-count">+</button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="description">
-            <p></p>
-          </div>
-        </div>
-      </div>
+            <br />
+            <hr />
+          </span>)
+        })}
+      </>
     )
   }
 }
