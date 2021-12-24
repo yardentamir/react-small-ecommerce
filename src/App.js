@@ -4,7 +4,6 @@ import ProductList from "./Pages/productsList";
 import Header from "./Components/Header";
 import HomePage from "./Pages/HomePage";
 import ProductPayment from "./Pages/ProductPayment";
-import Api from "./api";
 
 export default class ReactRouterExercise extends React.Component {
   state = { counter: 0, arrUserCart: [] };

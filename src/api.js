@@ -1,9 +1,3 @@
-// import axios from "axios";
-
-// const baseUrl = axios.create({
-//   baseURL: "https://amazon24.p.rapidapi.com/api/product",
-// });
-
 const axios = require("axios").default;
 
 const options = {
