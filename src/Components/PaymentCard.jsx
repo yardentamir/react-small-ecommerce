@@ -20,7 +20,7 @@ export default class PaymentCard extends React.Component {
                   <span className="price">{product.price}</span>
                   <div className="product-count">
                     <button className="button-count no-active" disabled>-</button>
-                    <input type="text" readonly className="number-product" value={product.count} />
+                    <input type="text" readOnly className="number-product" defaultValue={product.count} />
                     <button className="button-count">+</button>
                   </div>
                 </div>
